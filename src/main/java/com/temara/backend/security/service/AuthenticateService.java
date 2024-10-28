@@ -50,7 +50,7 @@ public class AuthenticateService extends BaseService {
       for (Role role : roles)
         roleCodes.add(role.getRoleCode());
 
-      Set<RoleMenu> roleMenus = roleMenuRepository.findByRoleCode(roleCodes);
+      Set<RoleMenu> roleMenus = roleMenuRepository.findByRoleCodeIn(roleCodes);
       Set<Integer> menuIds = new HashSet<>();
       for (RoleMenu roleMenu : roleMenus)
         menuIds.add(roleMenu.getMenuId());

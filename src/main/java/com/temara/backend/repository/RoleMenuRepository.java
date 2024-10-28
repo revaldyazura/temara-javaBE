@@ -11,5 +11,5 @@ import com.temara.backend.entity.RoleMenu.MenuRoleId;
 @Repository
 public interface RoleMenuRepository extends BaseRepository<RoleMenu, MenuRoleId> {
   
-  public Set<RoleMenu> findByRoleCode(Set<String> role);
+  public Set<RoleMenu> findByRoleCodeIn(Set<String> role);
 }
