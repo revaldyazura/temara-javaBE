@@ -27,7 +27,6 @@ public class SecurityController {
 
   @PostMapping("/hashing")
   public String hashPassword(@RequestBody JwtRequest request) {
-    // TODO: process POST request
     String hashCredential = Hashing.sha256()
         .hashString(request.getUsername() + request.getPassword(), StandardCharsets.UTF_8).toString();
     return hashCredential;

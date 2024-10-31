@@ -44,9 +44,6 @@ public class User implements UserDetails {
 
   private String password;
 
-  @Column(name = "profile_picture")
-  private UUID profilePicture;
-
   @Column(name = "created_date")
   private Timestamp createdDate;
 
